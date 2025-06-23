@@ -27,7 +27,7 @@
           class="form-control custom-input" placeholder="Aividade exercida" id="atividade">
 
       </div>
-      <app-secondary-button [disabled]="!atividade || atividade?.trim()?.length === 0" textoBotao="Adicionar" (click)="adicionarAtividade()"
+      <app-secondary-button [disabled]="!atividade || atividade.trim().length === 0" textoBotao="Adicionar" (click)="adicionarAtividade()"
         phClass="ph ph-plus"></app-secondary-button>
     </div>
     <div class="atividade-group">

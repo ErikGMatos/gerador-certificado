@@ -12,12 +12,11 @@ import { ICertificado } from '../../interfaces/certificado';
   styleUrl: './certificados.css'
 })
 export class Certificados implements OnInit {
-  constructor(private certificado: CertificadoService) { }
+  constructor(private readonly certificado: CertificadoService) { }
 
   certificados: ICertificado[] = []
 
   ngOnInit(): void {
     this.certificados = this.certificado.certificados;
-    console.log(this.certificados);
   }
 }

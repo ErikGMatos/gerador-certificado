@@ -27,7 +27,8 @@
           class="form-control custom-input" placeholder="Aividade exercida" id="atividade">
 
       </div>
-      <app-secondary-button [disabled]="atividade.length === 0" textoBotao="Adicionar" phClass="ph ph-plus"></app-secondary-button>
+      <app-secondary-button [disabled]="atividade.length === 0" textoBotao="Adicionar" (click)="adicionarAtividade()"
+        phClass="ph ph-plus"></app-secondary-button>
     </div>
     <div class="atividade-group">
       <label class="form-label">Lista de atividades</label>
@@ -35,7 +36,7 @@
         @for (atividade of atividades; track $index) {
         <div class="item">
           <span class="text-item">{{atividade}}</span>
-          <div class="remove-btn">
+          <div class="remove-btn" (click)="excluirAtividade($index)">
             <i class="ph-bold ph-x"></i>
           </div>
         </div>

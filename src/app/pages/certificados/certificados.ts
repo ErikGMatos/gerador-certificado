@@ -17,7 +17,7 @@ export class Certificados implements OnInit {
   certificados: ICertificado[] = []
 
   ngOnInit(): void {
-    this.certificados = this.certificado.certificados
+    this.certificados = this.certificado.certificados;
     console.log(this.certificados);
   }
 }

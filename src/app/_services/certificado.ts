@@ -11,7 +11,7 @@ export class CertificadoService {
   constructor() { }
 
   adicionarCertificado(certificado: ICertificado){
-    this.certificados.push({ ...certificado })
+    this.certificados.unshift({ ...certificado })
     localStorage.setItem('certificados', JSON.stringify(this.certificados))
   }
 }
